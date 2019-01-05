@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/stackoverflow.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
+  <title>Stack Overflow Layout</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="question" v-for="question in questions">
+      <div class="q-stat">
+        <h4 class="q-stat-num">{{question.votes}}</h4>
+        <p>votes</p>
+      </div>
+      <div class="q-stat">
+        <h4 class="q-stat-num">{{question.answers}}</h4>
+        <p>answers</p>
+      </div>
+      <div class="q-stat">
+        <h4 class="q-stat-num">{{question.views}}</h4>
+        <p>views</p>
+      </div>
+
+      <div class="q-title">
+        <h1>{{question.title}}</h1>
+        <section class="q-info">
+          <ul class="tags">
+            <li v-for="tag in question.tags" class="tag">{{tag}}</li>
+          </ul>
+          <p class="last-log">
+            answered {{question.lastLog.time}} by <span>{{question.lastLog.by}}</span>
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
