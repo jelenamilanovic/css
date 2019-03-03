@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.wrapper {
+  margin: 80px auto;
+  width: 60%;
+  position: relative;
+}
+
+.hexagon {
+  width: 250px;
+  height: 500px;
+  transform: rotate(120deg);
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+}
+
+.hexagon-inside {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-60deg);
+  overflow: hidden;
+
+}
+
+.hexagon-image {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg);
+  background-position: center;
+  background-size: 130% 60%;
+  transform: rotate(-60deg);
+  visibility: visible;
+}
+
+.i2 {
+  left: 280px
+}
+
+.i3 {
+  left: 560px
+}
+
+.i4 {
+  left: 840px;
+}
+
+.i5,
+.i6,
+.i7 {
+  top: 240px;
+}
+
+.i5 {
+  left: 140px
+}
+
+.i6 {
+  left: 420px;
+}
+
+.i7 {
+  left: 700px;
+}
