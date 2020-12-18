@@ -1,0 +1,58 @@
+body {
+  background: hsl(203, 48%, 12%);
+}
+
+.circles-wrapper {
+  animation: spin 1.2s infinite linear;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle:nth-child(1) {
+  border-top: 10px solid hsl(211, 83%, 61%);
+  animation: spinOne 1.2s alternate infinite linear;
+}
+
+.circle:nth-child(2) {
+  border-bottom: 1px solid hsl(211, 83%, 61%);
+  animation: spinTwo 1.2s alternate infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinOne {
+  from {
+    border-width: 10px;
+  }
+
+  to {
+    border-width: 1px;
+  }
+}
+
+@keyframes spinTwo {
+  from {
+    border-width: 1px;
+  }
+
+  to {
+    border-width: 10px;
+  }
+}

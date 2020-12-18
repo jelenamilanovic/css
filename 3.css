@@ -1,0 +1,33 @@
+:root{
+  --primary-color: #dbdbdb;
+}
+
+.baloon {
+  border-radius: 50%;
+  padding: 2rem;
+  border: 2px solid var(--primary-color);
+  position: relative;
+}
+
+.baloon::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 2rem solid transparent;
+  border-top: 2rem solid var(--primary-color);
+  bottom: -75%;
+  left: 0%;
+  border-radius: 2rem;
+}
+
+.baloon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 2rem solid transparent;
+  border-top: 2rem solid white; 
+  bottom: -71%;
+  left: 0%;
+  border-radius: 2rem;
+  z-index: 2;
+}

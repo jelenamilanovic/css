@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Steinbeck;
+  src: url('Steinbeck.otf');
+}
+
+:root {
+  --primary-color: hsl(47, 100%, 70%);
+  --font-color: hsl(240, 20%, 16%);
+  --background-color: hsl(200, 27%, 96%);
+}
+
+body {
+  font-family: Steinbeck, sans-serif;
+}
+
+.box {
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  cursor: pointer;
+  transition: border-radius .5s;
+}
+
+.box:hover {
+  border-radius: 200px;
+  background: var(--primary-color);
+}
+
+.box-icon {
+  transition: transform .5s;
+}
+
+.box:hover > .box-icon {
+  transform: rotate(-30deg);
+}
+
+.box-title {
+  font-size: 1.5rem;
+}

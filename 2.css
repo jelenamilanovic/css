@@ -1,0 +1,29 @@
+svg {
+  transition: all .5s;
+  overflow: visible;
+  cursor: pointer;
+}
+
+svg:hover .brandLogo__freddie {
+  animation: wink .7s .1s;
+}
+
+.brandLogo__freddie {
+  transition: all .1s;
+}
+
+svg:hover .brandLogo__freddie-eye--winking {
+  animation: hide 1s ease-out;
+}
+
+@keyframes hide {
+  0% { opacity: 0 };
+  99% { opacity: 0 };
+  100% { opacity: 1 };
+}
+
+@keyframes wink {
+  50% {
+    transform: rotate(-5deg) translateY(-10px);
+  }
+}

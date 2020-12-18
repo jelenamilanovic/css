@@ -1,0 +1,39 @@
+.squares {
+  width: 100px;
+  height: 100px;
+  perspective: 200px;
+  position: relative;
+  /* putting the element into the centre of the document: */
+  left: -50px;
+  top: -50px;
+}
+
+.square {
+  position: absolute;
+  background-color: coral;
+  width: 100%;
+  height: 100%;
+  animation: translateSquare 2s infinite linear;
+  transform-origin: bottom right;
+}
+
+.square:nth-child(2) {
+  opacity: .5;
+  animation-delay: 1s;
+  /* display: none; */
+}
+
+@keyframes translateSquare {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+   25% {
+    transform: rotateX(0deg) rotateY(180deg);
+  }
+ 50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(180deg) rotateY(0deg);
+  }
+}
